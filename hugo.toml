@@ -1,0 +1,58 @@
+baseURL = "https://jaelae.com/"
+languageCode = "en-us"
+title = "Jaelae"
+description = "Notes on building and running infrastructure at scale — by Jason Leydon"
+copyright = "Jason Leydon"
+paginate = 10
+enableRobotsTXT = true
+enableEmoji = true
+
+[params]
+  author = "Jason Leydon"
+  role = "Executive Director, Senior Principal Architect"
+  company = "JPMorgan Chase & Co."
+  location = "New Jersey"
+  tagline = "Notes on building and running infrastructure at scale."
+  bio = "20+ years in enterprise IT — from Exchange migrations and data center builds to designing cloud platforms for major financial institutions. I write about the real work of keeping systems running."
+  email = "jason@jaelae.com"
+  linkedin = "https://linkedin.com/in/jasonleydon"
+  ogImage = "/images/logos/og-image-1200x630.png"
+
+[params.consulting]
+  name = "Centixo"
+  url = "https://centixo.com"
+  description = "VMware, Nutanix, cloud optimization, and Office 365"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3

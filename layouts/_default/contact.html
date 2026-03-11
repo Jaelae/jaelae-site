@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="container">
+  <div class="page-header">
+    <h1>Get in touch<span class="dot">.</span></h1>
+  </div>
+
+  <p class="hero-desc" style="margin-bottom: 40px; max-width: 480px;">
+    Have a question, want to collaborate, or just want to talk infrastructure? I'm always happy to connect.
+  </p>
+
+  <div class="contact-box">
+    <div class="contact-item">
+      <div class="contact-icon">✉</div>
+      <div>
+        <div class="contact-label">Email</div>
+        <a href="mailto:{{ .Site.Params.email }}" class="contact-value">{{ .Site.Params.email }}</a>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon" style="font-weight: 700; font-family: var(--font-sans); font-size: 14px;">in</div>
+      <div>
+        <div class="contact-label">LinkedIn</div>
+        <a href="{{ .Site.Params.linkedin }}" class="contact-value" target="_blank" rel="noopener">linkedin.com/in/jasonleydon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="consulting-cta">
+    For business IT consulting — {{ .Site.Params.consulting.description }} — visit <a href="{{ .Site.Params.consulting.url }}" target="_blank" rel="noopener">{{ .Site.Params.consulting.name }}.com</a>
+  </div>
+</div>
+{{ end }}

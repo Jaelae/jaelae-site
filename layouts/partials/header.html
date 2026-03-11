@@ -1,0 +1,8 @@
+  <nav class="site-nav">
+    <a href="/" class="site-logo">jaelae<span class="dot">.</span></a>
+    <ul class="nav-links">
+      {{- range .Site.Menus.main }}
+      <li><a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}{{ if hasPrefix $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>

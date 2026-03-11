@@ -1,0 +1,152 @@
+{{ define "main" }}
+<div class="container">
+  <div class="page-header">
+    <h1>About<span class="dot">.</span></h1>
+  </div>
+
+  <!-- Identity -->
+  <div class="about-identity">
+    <img src="/images/headshot.jpg" alt="{{ .Site.Params.author }}" class="about-avatar">
+    <div>
+      <div class="about-name">{{ .Site.Params.author }}</div>
+      <div class="about-role">{{ .Site.Params.role }}</div>
+      <div class="about-company">{{ .Site.Params.company }} · {{ .Site.Params.location }}</div>
+    </div>
+  </div>
+
+  <!-- Bio -->
+  <div class="about-text">
+    <p>I'm an experienced technology specialist focused on solving complex problems in large-scale corporate environments. My career has been driven by one goal: lower downtime and reduce issues by finding the best solutions and tools to ensure the business runs more efficiently.</p>
+
+    <p>Over 20+ years I've worked my way from desktop support at Pfizer and Exchange migrations at BMW Financial to leading infrastructure solution design at Johnson &amp; Johnson and now architecting internal cloud platforms at JPMorgan Chase. Along the way I've built data centers from scratch, migrated thousands of VMs, deployed private clouds at global scale, and designed the automation that holds it all together.</p>
+
+    <p>My deepest expertise is in VMware (vSphere, VCF, NSX-T, vSAN), but I work across the full stack — Nutanix, Hyper-V, AWS, Azure, GCP, Cisco/Arista networking, and enterprise storage (HPE Primera, Dell PowerFlex). I've led PCI/HIPAA compliance efforts, vendor evaluations, and the kind of unglamorous but critical work that keeps enterprise infrastructure running.</p>
+
+    <p>This blog is where I write about the real, practical side of infrastructure — not the vendor slide deck version. Expect honest takes on migrations, platform comparisons, and the day-to-day decisions that don't make it into whitepapers.</p>
+  </div>
+
+  <!-- Skills -->
+  <div class="skills-box">
+    <div class="section-label">Core Technologies</div>
+    <div class="skills-list">
+      {{ range (slice "VMware vSphere" "VCF" "NSX-T" "vSAN" "Nutanix AHV" "Hyper-V" "AWS" "Azure" "GCP" "Office 365" "Cisco Nexus" "Arista" "HPE Primera" "Dell PowerFlex" "Terraform" "Ansible" "PowerShell" "vRealize Automation" "Docker" "Kubernetes" "Linux" "Windows Server") }}
+      <span class="skill-tag">{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Career Timeline -->
+  <div class="section-label">Career Timeline</div>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">JPMorgan Chase &amp; Co.</div>
+          <span class="timeline-period">2023 – Present</span>
+        </div>
+        <div class="timeline-title">Executive Director, Senior Principal Architect</div>
+        <div class="timeline-desc">Leading architecture and design of internal cloud platform. Driving scalable, resilient infrastructure with automated procedures and reusable design patterns.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">Johnson &amp; Johnson</div>
+          <span class="timeline-period">2019 – 2023</span>
+        </div>
+        <div class="timeline-title">Infrastructure Solution Design</div>
+        <div class="timeline-desc">Led global VMware-centric architecture across compute, storage, and network. Deep integration with Cisco/Arista networking and HPE Primera/Dell PowerFlex storage. Led NSX-v to NSX-T migration, VCF 4.x implementation, and vSAN architectures.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">Phreesia</div>
+          <span class="timeline-period">2016 – 2019</span>
+        </div>
+        <div class="timeline-title">Senior VMware Engineer</div>
+        <div class="timeline-desc">Designed and automated virtual and storage infrastructure across colocation and cloud. Built self-service portals with vRealize Automation. PCI and HIPAA compliance across all virtualization layers.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">EY</div>
+          <span class="timeline-period">2014 – 2016</span>
+        </div>
+        <div class="timeline-title">Cloud and VMware Specialist</div>
+        <div class="timeline-desc">Managed 1,500 sq ft data center lab. Hands-on with Cisco Nexus/Catalyst, EMC/Dell storage arrays, and global Flex 3.0 private cloud deployment across multiple VMware clusters.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">Baroan Technologies</div>
+          <span class="timeline-period">2013 – 2014</span>
+        </div>
+        <div class="timeline-title">Senior Solutions Engineer</div>
+        <div class="timeline-desc">Architecture and support for client VMware and Hyper-V environments. AWS deployments (EC2, S3, VPC), Office 365 migrations, and SharePoint consulting for multiple clients.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">HYTORC</div>
+          <span class="timeline-period">2007 – 2013</span>
+        </div>
+        <div class="timeline-title">IT Administrator</div>
+        <div class="timeline-desc">Built IT infrastructure from the ground up. Data center expansion, VMware 3.5→5.0 upgrades, Exchange, SharePoint, SQL Server deployments, and Salesforce implementation across all business units.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">BMW Bank of North America</div>
+          <span class="timeline-period">2004 – 2007</span>
+        </div>
+        <div class="timeline-title">Exchange Administrator</div>
+        <div class="timeline-desc">Migrated 40,000+ mailboxes from Exchange 5.5 to 2003. Blackberry Enterprise Server migrations and Microsoft Live Communications Server integration.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">Pfizer Pharmaceuticals</div>
+          <span class="timeline-period">2003 – 2004</span>
+        </div>
+        <div class="timeline-title">Desktop Support</div>
+        <div class="timeline-desc">Local and international support across Windows, Active Directory, UNIX, Solaris, and Mainframe environments. Network troubleshooting, VPN, and RSA SecurID.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-header">
+          <div class="timeline-company">Morris Catholic High School</div>
+          <span class="timeline-period">2001 – 2003</span>
+        </div>
+        <div class="timeline-title">System Administrator</div>
+        <div class="timeline-desc">Full IT infrastructure management. Migrated Novell NetWare 5 to Windows 2000, Exchange 5.5 to 2000, and deployed Linux thin clients across the school.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{{ end }}
